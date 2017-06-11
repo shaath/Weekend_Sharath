@@ -1,0 +1,39 @@
+package methods;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class OrgMaster 
+{
+	public static WebDriver driver;
+	public static String expval,actval;
+	//Launch
+	public String org_Launch(String url)
+	{
+		expval="LOGIN";
+		driver=new FirefoxDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		actval=driver.findElement(By.id("btnLogin")).getAttribute("value");
+		if (expval.equalsIgnoreCase(actval))
+		{
+			return "Pass";
+		}
+		else
+		{
+			return "Fail";
+		}
+	}
+	// Login
+	public String org_Login(String u,String p)
+	{
+		
+		driver.findElement(By.id("txtUsername")).sendKeys(u);
+		driver.findElement(By.id("txtPassword")).sendKeys(p);
+		driver.findElement(By.id("btnLogin")).click();
+	}
+}

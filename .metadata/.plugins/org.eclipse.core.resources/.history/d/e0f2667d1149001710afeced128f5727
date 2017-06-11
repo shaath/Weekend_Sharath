@@ -1,0 +1,15 @@
+package methods;
+
+public class LoginTC {
+
+	public static void main(String[] args) 
+	{
+		OrgMaster om=new OrgMaster();
+		//Launch
+		String res=om.org_Launch("http://opensource.demo.orangehrmlive.com");
+		
+		
+
+	}
+
+}

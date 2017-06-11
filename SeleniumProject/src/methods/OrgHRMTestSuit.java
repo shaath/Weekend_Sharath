@@ -1,0 +1,79 @@
+package methods;
+
+import java.io.IOException;
+
+public class OrgHRMTestSuit {
+
+	public static void main(String[] args) throws IOException 
+	{
+		OrgMaster om=new OrgMaster();
+		
+		//Login TC
+		
+		//Launch
+		String res=om.org_Launch("http://opensource.demo.orangehrmlive.com");
+		System.out.println("Application Launch "+res);
+		//Login
+		res=om.org_Login("Admin", "admin");
+		System.out.println("Application Login "+res);
+		//Logout
+		res=om.org_Logout();
+		System.out.println("Application Logout "+res);
+		//Close
+		om.org_Close();
+		System.out.println("Application Close Succccessfull");
+		
+		//Empreg
+		
+		//Launch
+		res=om.org_Launch("http://opensource.demo.orangehrmlive.com");
+		System.out.println("Application Launch "+res);
+		//Login
+		res=om.org_Login("Admin", "admin");
+		System.out.println("Application Login "+res);
+		//Empreg
+		res=om.org_Empreg("Sandeep", "Kumar");
+		System.out.println("Employee Registration "+res);
+		//Logout
+		res=om.org_Logout();
+		System.out.println("Application Logout "+res);
+		//Close
+		om.org_Close();
+		System.out.println("Application Close Succccessfull");
+				
+		//User Reg TC
+		
+		//Launch
+		res=om.org_Launch("http://opensource.demo.orangehrmlive.com");
+		System.out.println("Application Launch "+res);
+		//Login
+		res=om.org_Login("Admin", "admin");
+		System.out.println("Application Login "+res);
+		//Userreg
+		res=om.org_Userreg("Sandeep Kumar", "SandeepKumar123456", "SandeepKumar123456", "SandeepKumar123456");
+		System.out.println("User registration "+res);
+		//Logout
+		res=om.org_Logout();
+		System.out.println("Application Logout "+res);
+		//Close
+		om.org_Close();
+		System.out.println("Application Close Succccessfull");
+		
+		//User Login TC
+		//Launch
+		res=om.org_Launch("http://opensource.demo.orangehrmlive.com");
+		System.out.println("Application Launch "+res);
+		//Login
+		res=om.org_Login("SandeepKumar123456", "SandeepKumar123456");
+		System.out.println("Application Login "+res);
+		//Logout
+		res=om.org_Logout();
+		System.out.println("Application Logout "+res);
+		//Close
+		om.org_Close();
+		System.out.println("Application Close Succccessfull");
+		
+
+	}
+
+}

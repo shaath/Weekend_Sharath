@@ -1,0 +1,15 @@
+package datadriven;
+
+import java.io.FileInputStream;
+
+public class XlOps {
+
+	public static void main(String[] args) 
+	{
+		String xlpath="F:\\New_Weekend\\SeleniumProject\\src\\testData\\EmpregData.xlsx";
+		FileInputStream fi=new FileInputStream(xlpath);
+		
+
+	}
+
+}
